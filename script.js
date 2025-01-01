@@ -10,7 +10,7 @@ function renderMenu() {
   menu.className = 'menu';
 
   // إنشاء قائمة المحاضرات
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= 28; i++) {
     const button = document.createElement('button');
     button.textContent = `Lecture ${i}`;
     button.className = 'lecture-button';
@@ -116,10 +116,10 @@ function checkAnswer(questionIndex, selectedOption) {
   feedbackDiv.innerHTML = ""; // تنظيف المحتوى السابق
   if (selectedOption === correctAnswer) {
     feedbackDiv.innerHTML = `Correct! ${explanation}`;
-    feedbackDiv.style.color = "#28a745";
+    feedbackDiv.style.color = "#00008B";
   } else {
     feedbackDiv.innerHTML = `Wrong answer! The correct answer is: ${correctAnswer}. ${explanation}`;
-    feedbackDiv.style.color = "#dc3545";
+    feedbackDiv.style.color = "#00008B";
   }
 
   // عرض الصورة الخاصة بالشرح إن وجدت
