@@ -73,7 +73,7 @@ const questions =[
         "B. Aortic valve endocarditis",
         "C. Unicuspid aortic valve",
         "D. Hypertrophic cardiomyopathy"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_26q.JPG",
     "answer": "B. Aortic valve endocarditis",
     "explanation": "Large vegetations are seen on the aortic valve. Ascending aorta is normal sized with no visible flap. Unicuspid aortic valve can be diagnosed only in the short axis view showing only a single cusp and a single commissure. In this example, there is a large vegetation on the noncoronary cusp and a smaller one on the right coronary cusp."
 },
@@ -86,7 +86,7 @@ const questions =[
         "B. Severe mitral regurgitation",
         "C. Tricuspid regurgitation",
         "D. Ventricular septal defect"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_27q.JPG",
     "answer": "A. Hypertrophic obstructive cardiomyopathy",
     "explanation": "Late peaking systolic signal is indicative of dynamic LV outflow tract obstruction, which is most severe in end systole when the LV volume is minimal. The timing corresponds to LV ejection and begins following a period after the onset of the QRS signal. There is a gap between the end of the signal and onset of mitral inflow. The MR signal occupies not only the ejection period but also the isovolumic contraction and relaxation periods and is a longer duration signal and is continuous with the mitral inflow without any intervening gap. The tricuspid regurgitation (TR) signal is similar but tends to be broader with a lower velocity inflow. The cursor position, if visible, is also helpful to identify the origin of the signal. The ventricular septal defect signal is holosystolic but generally tends to have a presystolic component due to left atrial contraction."
 },
@@ -99,7 +99,7 @@ const questions =[
         "B. Right atrium",
         "C. Aorta",
         "D. Right pulmonary artery"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_28q.JPG",
     "answer": "A. Left atrium",
     "explanation": "This TEE long axis view of the left atrium and right atrium is also popularly called a bicaval view; the left atrium is immediately anterior to the esophagus."
 },
@@ -112,7 +112,7 @@ const questions =[
         "B. Inferior vena cava",
         "C. Pulmonary artery",
         "D. Aorta"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_29q.JPG",
     "answer": "A. Superior vena cava",
     "explanation": "In a vertical or near vertical plane, the right side is cephalad and the left side is caudal."
 },
@@ -125,7 +125,7 @@ const questions =[
         "B. Right atrial appendage",
         "C. Inferior vena cava",
         "D. None of the above"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_30q.JPG",
     "answer": "B. Right atrial appendage",
     "explanation": "Right atrial appendage."
 },
@@ -138,7 +138,7 @@ const questions =[
         "B. Large pericardial effusion with no evidence of tamponade",
         "C. Large pericardial effusion with features of tamponade",
         "D. Mirror image artifact"
-    ],
+    ], "questionImage": "https://alhadi415.github.io/top600/images/12_31q.JPG",
     "answer": "C. Large pericardial effusion with features of tamponade",
     "explanation": "This figure shows pericardial effusion with features of tamponade (right atrial collapse)."
 },
@@ -151,7 +151,7 @@ const questions =[
         "B. Abnormal LV relaxation with normal LA pressure",
         "C. Pseudonormal filling",
         "D. Restrictive LV filling"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_32q.JPG",
     "answer": "B. Abnormal LV relaxation with normal LA pressure",
     "explanation": "Abnormal LV relaxation pattern includes prolonged LV isovolumic relaxation time (\(>\)100 ms), E/A ratio < 1, and E-wave deceleration time > 250 ms."
 },
@@ -164,7 +164,7 @@ const questions =[
         "B. RV ejection",
         "C. Mitral valve opening",
         "D. Mitral annular descent"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_33q.JPG",
     "answer": "A. Left atrial relaxation",
     "explanation": "The arrow denotes the S1 wave, which is caused by left atrial relaxation. RV ejection and mitral annular descent generate the S2 wave, which follows the S1 wave. The mitral valve opening generates the D-wave, which is synchronous with the mitral E-wave."
 },
@@ -177,7 +177,7 @@ const questions =[
         "B. Severe mitral stenosis",
         "C. Severe aortic stenosis",
         "D. Mild mitral regurgitation"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_34q.JPG",
     "answer": "A. Severe mitral regurgitation",
     "explanation": "The timing of the signal starts with the QRS complex and the end, being continuous with the onset of mitral inflow, suggests MR. A density approaching that of mitral inflow suggests this to be severe. Other clues to severe MR could be a 'V-wave cut-off sign' and mitral inflow suggestive of high LA pressure."
 },
@@ -190,7 +190,7 @@ const questions =[
         "B. Severe mitral stenosis",
         "C. Prosthetic mitral valve",
         "D. Atrial fibrillation"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_35q.JPG",
     "answer": "A. Severe mitral regurgitation",
     "explanation": "The presence of an A-wave excludes atrial fibrillation, mitral stenosis, and prosthetic mitral valve. The E-wave deceleration will be slow. The inflow pattern shown here indicates high left atrial pressure typified by E/A ratio > 2 and E-wave deceleration of <150 ms and is consistent with severe MR."
 },
@@ -203,7 +203,7 @@ const questions =[
         "B. Coronary sinus",
         "C. Aortic ring abscess",
         "D. Prosthetic valve dehiscence"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_36q.JPG",
     "answer": "C. Aortic ring abscess",
     "explanation": "This patient has native aortic valve endocarditis with an anterior aortic ring abscess shown by the arrow. In patients with aortic valve endocarditis it is imperative to look for aortic root, ring, or the mitral aortic intervalvular fibrosa. TEE is superior to transthoracic echocardiogram for this purpose."
 },
@@ -216,7 +216,7 @@ const questions =[
         "B. Unicuspid",
         "C. Bicuspid with conjoint right and left cusp",
         "D. Bicuspid with conjoint left and noncoronary cusps"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_37q.JPG",
     "answer": "D. Bicuspid with conjoint left and noncoronary cusps",
     "explanation": "Bicuspid with conjoint left and noncoronary cusps."
 },
@@ -229,7 +229,7 @@ const questions =[
         "B. Vegetation",
         "C. Artifact",
         "D. Aortic aneurysm"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_38q.JPG",
     "answer": "A. Subaortic membrane",
     "explanation": "Note the membrane attached to the ventricular septum beneath the aortic valve. This is thin and uniformly membranous in appearance."
 },
@@ -242,7 +242,7 @@ const questions =[
         "B. Significant mixed mitral valve disease",
         "C. Significant mixed tricuspid valve disease",
         "D. Hypertrophic obstructive cardiomyopathy"
-    ],
+    ],"questionImage": "https://alhadi415.github.io/top600/images/12_39q.JPG",
     "answer": "A. Significant mixed aortic valve disease",
     "explanation": "The systolic signal does not begin with the onset of QRS, which is typical of MR or TR. Hence, this is indicative of aortic stenosis (AS) with aortic regurgitation (AR). The AS signal is midpeaking, which correlates with a slow rise in aortic pressure, as the kinetic energy associated with the jet is very significant and this results in a corresponding drop in potential energy. Note that the end of the AS signal is continuous with the AR signal and vice versa. This indicates the origin of the signals at the same valve."
 },
