@@ -215,7 +215,7 @@ const questions =[
         "C. Ostium primum ASD",
         "D. Sinus venosus ASD"
     ],"questionImage": "https://alhadi415.github.io/top600/images/13_57q.JPG",
-    "answer": "B. Ostium secundum ASD",
+    "answer":  "B. Ostium secundum atrial septal defect (ASD)",
     "explanation": "Ostium secundum ASD. Primum ASD would be in the lower part of the septum and may involve anterior mitral leaflet and A–V conduction. Sinus venosus ASD is in the upper septum near the superior vena cava and may also be associated with anomalous drainage of the right upper pulmonary vein. There is also a rare type of sinus venosus ASD in the vicinity of the IVC. In unroofed coronary sinus, the shunt is from LA to RA through a posterior defect into the coronary sinus such that flow goes through the coronary sinus into the RA"
 },
 
