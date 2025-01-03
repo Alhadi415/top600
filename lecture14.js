@@ -125,7 +125,7 @@ const questions =[
         "D. High left atrial pressure"
     ],"questionImage": "https://alhadi415.github.io/top600/images/14_70q.JPG" ,
     "answer": "A. Normal mitral valve motion",
-    "explanation": "This M mode is suggestive of normal mitral valve motion. There is normal mitral valve opening with greater early diastolic opening compared to opening associated with left atrial contraction. Valvular mitral stenosis would cause mitral leaflet"
+    "explanation": "This M mode is suggestive of normal mitral valve motion. There is normal mitral valve opening with greater early diastolic opening compared to opening associated with left atrial contraction. Valvular mitral stenosis would cause mitral leaflet  thickening, reduced opening and reduced ejection fraction (EF) slope, and paradoxical anterior motion of the posterior leaflet during diastole because of commissural fusion. Severe aortic regurgitation (AR) may cause fluttering of the anterior mitral leaflet and premature closure of the anterior mitral leaflet as the mitral valve opening is flow dependent. Features of high left atrial pressure will include predominant early opening, rapid EF slope and a smaller opening with atrial contraction mirroring the transmitral inflow pattern                  "
 },
 
 // Question 271
