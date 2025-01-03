@@ -10,7 +10,7 @@ function renderMenu() {
   menu.className = 'menu';
 
   // إنشاء قائمة المحاضرات
-  for (let i = 1; i <= 28; i++) {
+  for (let i = 1; i <= 20; i++) {
     const button = document.createElement('button');
     button.textContent = `Lecture ${i}`;
     button.className = 'lecture-button';
