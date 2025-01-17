@@ -1,15 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
   renderMenu();
+
+  // إضافة حدث للنقر على رابط "Coloring"
+  document.getElementById('coloring-link').addEventListener('click', () => {
+    toggleColorControls();
+  });
+
+  // إضافة حدث للنقر على رابط "Contact"
+  document.getElementById('contact-link').addEventListener('click', () => {
+    openContactPopup();
+  });
 });
+
+if (q.questionImage) {
+  const questionImage = document.createElement('img');
+  questionImage.src = q.questionImage;
+  questionImage.alt = `Image for question ${index + 1}`;
+  questionImage.style = "max-width: 100%; height: auto; margin-top: 10px;";
+  questionDiv.appendChild(questionImage);
+}
+
+
+
+function toggleColorControls() {
+  const colorControls = document.getElementById('color-controls');
+  if (colorControls.style.display === 'block') {
+    colorControls.style.display = 'none'; // إخفاء واجهة تحكم الألوان
+  } else {
+    colorControls.style.display = 'block'; // إظهار واجهة تحكم الألوان
+  }
+}
 
 function renderMenu() {
   const container = document.getElementById('quiz-container');
-  container.innerHTML = ""; // تنظيف الحاوية
+  container.innerHTML = "";
 
   const menu = document.createElement('div');
   menu.className = 'menu';
 
-  // إنشاء قائمة المحاضرات
   for (let i = 1; i <= 25; i++) {
     const button = document.createElement('button');
     button.textContent = `Lecture ${i}`;
@@ -24,13 +52,11 @@ function renderMenu() {
 function loadLecture(lectureNumber) {
   const scriptId = `lecture-${lectureNumber}-script`;
 
-  // إزالة الملف السابق إذا كان موجودًا
   const oldScript = document.getElementById(scriptId);
   if (oldScript) {
     oldScript.remove();
   }
 
-  // تحميل ملف المحاضرة ديناميكيًا
   const script = document.createElement('script');
   script.src = `lecture${lectureNumber}.js`;
   script.id = scriptId;
@@ -44,7 +70,7 @@ function loadLecture(lectureNumber) {
 
 function renderQuiz() {
   const quizContainer = document.getElementById('quiz-container');
-  quizContainer.innerHTML = ""; // تنظيف الحاوية
+  quizContainer.innerHTML = "";
 
   const backButton = document.createElement('button');
   backButton.textContent = "Back to Menu";
@@ -56,12 +82,10 @@ function renderQuiz() {
     const questionDiv = document.createElement('div');
     questionDiv.className = 'question';
 
-    // عرض السؤال
     const questionTitle = document.createElement('h3');
     questionTitle.textContent = `${index + 1}. ${q.question}`;
     questionDiv.appendChild(questionTitle);
 
-    // عرض الصورة الخاصة بالسؤال إن وجدت
     if (q.questionImage) {
       const questionImage = document.createElement('img');
       questionImage.src = q.questionImage;
@@ -70,7 +94,6 @@ function renderQuiz() {
       questionDiv.appendChild(questionImage);
     }
 
-    // عرض الخيارات
     const optionsList = document.createElement('ul');
     optionsList.className = 'options';
     q.options.forEach(option => {
@@ -90,7 +113,6 @@ function renderQuiz() {
     });
     questionDiv.appendChild(optionsList);
 
-    // مكان عرض النتيجة
     const feedbackDiv = document.createElement('div');
     feedbackDiv.id = `feedback-${index}`;
     questionDiv.appendChild(feedbackDiv);
@@ -105,6 +127,10 @@ function checkAnswer(questionIndex, selectedOption) {
   const explanation = questions[questionIndex].explanation;
   const explanationImage = questions[questionIndex].explanationImage;
 
+  // الحصول على الألوان المحددة من قبل المستخدم
+  const correctColor = document.getElementById('correct-color').value;
+  const incorrectColor = document.getElementById('incorrect-color').value;
+
   const radioButtons = document.querySelectorAll(`input[name='question-${questionIndex}']`);
   radioButtons.forEach((button) => {
     button.classList.remove('correct', 'incorrect');
@@ -113,13 +139,13 @@ function checkAnswer(questionIndex, selectedOption) {
   });
 
   // عرض النتيجة مع الشرح
-  feedbackDiv.innerHTML = ""; // تنظيف المحتوى السابق
+  feedbackDiv.innerHTML = "";
   if (selectedOption === correctAnswer) {
     feedbackDiv.innerHTML = `Correct! ${explanation}`;
-    feedbackDiv.style.color = "#00008B";
+    feedbackDiv.style.color = correctColor;
   } else {
     feedbackDiv.innerHTML = `Wrong answer! The correct answer is: ${correctAnswer}. ${explanation}`;
-    feedbackDiv.style.color = "#00008B";
+    feedbackDiv.style.color = incorrectColor;
   }
 
   // عرض الصورة الخاصة بالشرح إن وجدت
@@ -132,3 +158,49 @@ function checkAnswer(questionIndex, selectedOption) {
   }
 }
 
+function openSideMenu() {
+  document.getElementById("side-menu").style.width = "250px";
+  document.getElementById("quiz-container").style.marginRight = "250px";
+}
+
+function closeSideMenu() {
+  document.getElementById("side-menu").style.width = "0";
+  document.getElementById("quiz-container").style.marginRight = "50px";
+}
+
+// إظهار نافذة Contact المنبثقة
+function openContactPopup() {
+  const contactPopup = document.getElementById('contact-popup');
+  if (contactPopup) {
+    contactPopup.style.display = 'block';
+  }
+}
+
+// إخفاء نافذة Contact المنبثقة
+function closeContactPopup() {
+  const contactPopup = document.getElementById('contact-popup');
+  if (contactPopup) {
+    contactPopup.style.display = 'none';
+  }
+}
+
+// إرسال النموذج
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault(); // منع إعادة تحميل الصفحة
+
+  // جمع بيانات النموذج
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // إرسال البيانات (هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم)
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+
+  // إغلاق النافذة بعد الإرسال
+  closeContactPopup();
+
+  // إظهار رسالة نجاح
+  alert("تم إرسال الرسالة بنجاح!");
+});
