@@ -78,7 +78,7 @@ function renderQuiz() {
   toggleContainer.appendChild(toggleLabel);
 
   const toggleText = document.createElement('span');
-  toggleText.textContent = 'Show Submit Button';
+  toggleText.textContent = 'SHOW ANSWERS';
   toggleText.style.marginLeft = '10px';
   toggleContainer.appendChild(toggleText);
 
