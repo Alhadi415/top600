@@ -12,16 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-if (q.questionImage) {
-  const questionImage = document.createElement('img');
-  questionImage.src = q.questionImage;
-  questionImage.alt = `Image for question ${index + 1}`;
-  questionImage.style = "max-width: 100%; height: auto; margin-top: 10px;";
-  questionDiv.appendChild(questionImage);
-}
-
-
-
 function toggleColorControls() {
   const colorControls = document.getElementById('color-controls');
   if (colorControls.style.display === 'block') {
@@ -72,12 +62,36 @@ function renderQuiz() {
   const quizContainer = document.getElementById('quiz-container');
   quizContainer.innerHTML = "";
 
+  // إضافة زر التبديل داخل quiz-container
+  const toggleContainer = document.createElement('div');
+  toggleContainer.style.marginBottom = '20px';
+
+  const toggleLabel = document.createElement('label');
+  toggleLabel.className = 'switch';
+  const toggleInput = document.createElement('input');
+  toggleInput.type = 'checkbox';
+  toggleInput.id = 'toggle-submit';
+  const toggleSlider = document.createElement('span');
+  toggleSlider.className = 'slider round';
+  toggleLabel.appendChild(toggleInput);
+  toggleLabel.appendChild(toggleSlider);
+  toggleContainer.appendChild(toggleLabel);
+
+  const toggleText = document.createElement('span');
+  toggleText.textContent = 'Show Submit Button';
+  toggleText.style.marginLeft = '10px';
+  toggleContainer.appendChild(toggleText);
+
+  quizContainer.appendChild(toggleContainer);
+
+  // إضافة زر "Back to Menu"
   const backButton = document.createElement('button');
   backButton.textContent = "Back to Menu";
   backButton.className = 'back-button';
   backButton.addEventListener('click', renderMenu);
   quizContainer.appendChild(backButton);
 
+  // عرض الأسئلة
   questions.forEach((q, index) => {
     const questionDiv = document.createElement('div');
     questionDiv.className = 'question';
@@ -102,7 +116,11 @@ function renderQuiz() {
       optionInput.type = 'radio';
       optionInput.name = `question-${index}`;
       optionInput.value = option;
-      optionInput.addEventListener('change', () => checkAnswer(index, option));
+      optionInput.addEventListener('change', () => {
+        if (!toggleInput.checked) {
+          checkAnswer(index, option);
+        }
+      });
 
       const optionLabel = document.createElement('label');
       optionLabel.textContent = option;
@@ -118,6 +136,37 @@ function renderQuiz() {
     questionDiv.appendChild(feedbackDiv);
 
     quizContainer.appendChild(questionDiv);
+  });
+
+  // إضافة زر "Submit" في أسفل الأسئلة
+  const submitButton = document.createElement('button');
+  submitButton.textContent = "Submit";
+  submitButton.id = 'submit-button';
+  submitButton.style.display = 'none'; // مخفي بشكل افتراضي
+  quizContainer.appendChild(submitButton);
+
+  // إضافة حدث لزر التبديل
+  toggleInput.addEventListener('change', () => {
+    if (toggleInput.checked) {
+      submitButton.style.display = 'block'; // إظهار زر "Submit"
+    } else {
+      submitButton.style.display = 'none'; // إخفاء زر "Submit"
+    }
+  });
+
+  // إضافة حدث لزر "Submit"
+  submitButton.addEventListener('click', () => {
+    let score = 0;
+    questions.forEach((q, index) => {
+      const selectedOption = document.querySelector(`input[name='question-${index}']:checked`);
+      if (selectedOption) {
+        if (selectedOption.value === q.answer) {
+          score++;
+        }
+        checkAnswer(index, selectedOption.value);
+      }
+    });
+    alert(`Your score is: ${score}/${questions.length}`);
   });
 }
 
